@@ -8,7 +8,7 @@ function showAlert(alertMsg) {
         alertArea.innerText = '';
         alertArea.setAttribute('class', 'alert alert-dismissible fade show alert-area');
     }, 2000);
-    
+
 }
 
 function handleClearClick() {
@@ -61,11 +61,8 @@ setInterval(() => {
     const readTimePara = document.getElementById('readTime');
     readTimePara.innerText = `${text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and ${text.length} characters
                               ${0.008 * text.split(" ").filter((element) => { return element.length !== 0 }).length} Minutes to read `;
-    
+
     const preview = document.getElementById('preview');
     preview.innerText = text;
 
 }, 100);
-
-
-
