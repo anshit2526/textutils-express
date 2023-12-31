@@ -1,0 +1,36 @@
+extends base.pug
+
+block style 
+    style 
+        include ../static/style.css
+    style(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css")
+
+block scripts
+    script(src='./static/index.js')
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js')
+
+block content 
+
+    div(id='alertArea' class='alert alert-dismissible fade show alert-area')
+
+    div(class="container")
+        h1 Enter the text to analyze
+        div(class="mb-3")
+            textarea(class="placeholder-glow col-12 bg-light text-dark" id="myBox" rows="8" placeholder="Enter text here" )
+        button(class="btn btn-primary mx-2 my-1" onclick='handleUpperClick()') Convert to uppercase
+        button(class="btn btn-primary mx-2 my-1" onclick='handleLowerClick()') Convert to lowercase
+        button(class="btn btn-primary mx-2 my-1" onclick='handleClearClick()') Clear
+        button(class="btn btn-primary mx-2 my-1" onclick='handleCopyClick()') Copy
+        button(class="btn btn-primary mx-2 my-1" onclick='handlePasteClick()') Paste
+
+    div(class="container my-3")
+        h2 Your text summary
+        p(id='readTime')
+        h2 Preview
+        pre
+            p(id='preview')
+
+
+
+
+    
